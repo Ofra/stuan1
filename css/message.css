@@ -1,0 +1,65 @@
+#message{
+	background-color: #f6f5f4;
+	height: 1100px;
+	margin:auto;
+	width: 90%;
+	box-shadow: white 0px 0px 20px;
+	position: relative;
+} 
+
+#message .titulo2{
+	color:#2c539e;
+	font-size: 3em;
+	text-align: center;
+	text-shadow:2px 2px 3px black;
+	padding-top: 0.5em;
+}
+
+#message figure{
+	margin: 0em 1em 0px 5em;
+	float:left;
+}
+
+#message p{
+	margin: 0em 1em 0px 3.2em;
+	padding: 0.5em 2em;
+	text-align: justify;
+}
+
+#message figure img{
+	border:4px solid white;
+	box-shadow: 2px 2px 2px black;
+	width: 350px;
+}
+
+#message p:nth-child(even){
+	background-color: white;
+}
+
+#message p:nth-child(4){
+	margin-left: 5em;
+}
+
+#message .icon-quill{
+	position: absolute;
+	color: 	#0055e5;
+	top: 0.7em;
+	left: 1em;
+	font-size: 6em;
+	text-shadow: yellow 2px 2px 10px;
+	opacity: 0.9;
+}
+
+#message .icon-bullhorn{
+	position: absolute;
+	color: 	#0055e5;
+	top: 2.8em;
+	left: 1.5em;
+	font-size: 15em;
+	text-shadow: yellow 2px 2px 10px;
+	opacity: 0.2;
+}
+
+#message .icon-bullhorn:hover{
+	text-shadow: yellow 30px 2px 50px;
+}

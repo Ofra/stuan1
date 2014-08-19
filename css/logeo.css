@@ -1,0 +1,149 @@
+body{
+	position: relative;
+}
+#loggin{
+	position:absolute;
+	z-index: 	100;	
+	display: none;	
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+#loggin #loggin1{
+	background-color: #e8e2db;
+	border-radius: 5px;
+	border:4px solid white;
+	margin:auto;
+	box-shadow:yellow 2px 2px 20px;
+	width: 40%;
+	margin-top: 6em;
+	position: relative;	
+}
+
+#loggin2{
+	background-color: #171854;
+	border-bottom: 10px solid white;
+	box-shadow: 0px 0px 2px yellow;
+	color: white;
+	position: relative;
+	height: 150px;
+	margin-top: -31px;
+
+}
+
+#frm_login {
+	height: 150px;
+	
+}
+
+#frm_login table{
+	margin:auto;
+}
+
+#frm_login table:first-child{
+	padding-top: 2.5em; 
+}
+
+#loggin2 .icon-close{
+	color: #171854;
+	float: right;
+	margin-top: 1em;
+	margin-right: 1em;
+	font-size: 1.5em;
+	transition:1s;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    -ms-transition:1s;
+    -o-transition:1s;
+    text-shadow:0px 0px 10px white;
+}
+
+#loggin2 .icon-close:hover{
+	color:white;
+	font-size: 2em;
+	text-shadow:0px 0px 25px red;
+}
+
+#loggin2 .icon-user{
+	font-size: 1em;
+	margin-left: 1em;
+	text-shadow:2px 2px 2px yellow;
+}
+
+#frm_login .icon-briefcase{
+	color:white;
+	text-shadow:2px 2px 2px black;
+	margin-left: 1em;
+	position:absolute;
+	margin-top:1em;
+	font-size: 3em;
+
+}
+
+#loggin2 h3{
+	margin-left: 4.7em;
+	padding-top: 0em;
+	font-size: 2.5em;
+	color:white;
+	text-shadow:2px 2px 2px yellow;
+}
+/*
+#contenedor{
+    position:relative;
+    margin:50px auto;
+    background: #666;
+    width: 500px;
+    height: 700px;
+    padding-top: 30px;     
+}*/
+
+.cabecera{
+    position: relative;
+    background: #08088A;
+    padding: 10px 25px;
+    margin-left: -20px;
+    margin-top: 50px;
+    width: 50%;
+    color: #fff;
+    font-size:20px;
+    font-weight:bold;
+    
+}
+
+.triangulo{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 20px 10px 0;
+    border-color: transparent #0B0B61 transparent transparent;
+    top: 100%;
+    left: 0;
+    position: absolute;
+}
+
+
+#submitt{
+	background: #08088A;
+	border-radius: 10%;
+	box-shadow: 2px 2px 2px white;
+	color: white;
+	padding: 0.2em 0.5em;
+	margin-left: 2em;
+
+}
+
+#submitt:hover{
+	background-color: white;
+	box-shadow: 2px 2px 2px black;
+	color:#08088A;
+}
+
+input{
+	border-radius: 10px;	
+}
+input:focus{
+	border:2px solid green;
+	
+}

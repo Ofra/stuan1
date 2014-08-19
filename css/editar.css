@@ -1,0 +1,77 @@
+#administrar1{
+	width: 100%;
+}
+
+
+.picture1{
+	display:inline-block;
+	margin: 0px;
+	padding: 0px;
+	position:relative;
+	width: 235.5px;
+	text-align: center;
+}
+
+.picture1 img{
+	margin: 0px;
+	padding: 0px;
+	border:5px solid white;
+	border-radius:5px;
+	width: 223px;
+	height: 177px;
+}
+ 
+
+
+.picture1 label{
+	color: white;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.picture1 .span-close{
+	border: 0px solid #f6f5f4;
+	box-shadow: 0px 0px 0px black;
+	border-radius: 0px;
+	background-color: ;
+}
+
+
+
+.picture1 #datos1{
+	/*background-color: black;*/
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 3px;
+	width: 100%;
+	opacity: 1;
+	text-align: left;
+}
+
+.picture1 .icon-close{
+	text-shadow: 0px 0px 20px red;
+	color:#ab1b1b;
+	padding: 0.5em;
+	margin-left: 0.5em;
+	z-index: 1;
+	text-decoration: none;
+}
+
+.picture1 .icon-close:hover{
+	color:#da1b1b;
+	text-shadow:0px 0px 20px black;
+}
+
+.picture1 div{
+	display: none;
+	word-wrap: break-word;
+	text-align: center;
+	
+}
+
+.picture1:hover > div{
+	display: block;
+	
+}
+

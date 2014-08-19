@@ -1,0 +1,15 @@
+Tabla: Album
+
+Id_album
+Titulo_album,
+Fecha,
+Foto_portada,
+Descrip_corta,
+Descrip_larga,
+Principal
+
+Tabla: Imagen
+
+Id_imagen
+Id_album
+nombre

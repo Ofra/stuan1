@@ -1,0 +1,143 @@
+#contacto{
+	background-color: #f6f5f4;
+	box-shadow: 0px 0px 20px white;
+	height: 700px;
+	margin: auto;
+	width: 90%;
+
+}
+
+#contacto h1{
+	margin-top: -10px;
+	text-align: center;
+	color:#00A5e5;
+	font-size:3em; 
+	text-shadow:2px 2px 2px black;
+	padding-top: 0.7em;
+	transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	-o-transition:1s;
+	-ms-transition:1s;
+
+}
+
+#contacto h1:hover{
+	color:#00A5e5;
+	font-size:3em; 
+	text-shadow:2px 2px 2px black;
+	
+
+}
+
+#contacto1{
+	background:  #08588A;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px black;
+	height: 500px;
+	position: absolute;
+	top: 23em;
+	margin-left: 9em;
+	width: 50%;
+}
+
+#contacto1 form table{
+	
+	color:white;
+	margin:auto;
+	width: 90%;
+	font-family: 'Bevan', cursive;
+}
+#contacto1 form table tr td:nth-child(odd){
+	width: 180px;
+	padding: 1em;
+}
+
+#contacto1 form table tr td:nth-child(even){
+	width: 270px;
+}
+
+#contacto1 form table tr td input{
+	width: 350px;
+	border-radius: 10px;
+}
+
+#contacto1 form table tr td textarea{
+	width: 350px;	
+	height: 200px;
+	border-radius: 10px;
+}
+
+#contacto1 form table tr td input[type=submit]{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px black;
+	padding: 0.5em;
+	text-decoration: none;
+	width: 6em;
+	font-family: 'Bevan', cursive;
+	transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	-o-transition:1s;
+	-ms-transition:1s;
+}
+
+#contacto1 form table tr td input[type=submit]:hover{
+	background-color: #00A5e5;
+	box-shadow: 0px 0px 20px black;
+	margin-left: 1em;
+	color:white;
+}
+
+#contacto1 .icon-mail{
+	position: absolute;
+	color: white;
+	font-size: 6em;
+	margin-top: 3.7em;
+	margin-left: 0.8em;
+
+}
+#contacto .icon-feed{
+	position: absolute;
+	color: #00A5e5;
+	font-size: 4em;
+	margin-left: 12.5em;
+	margin-top: -1em;
+}
+
+input:focus:invalid {
+  -webkit-appearance: none;
+  background-color:#fad0d0;
+  border: 1px solid #e85c5c;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 20px red;
+}
+
+input:focus:valid {
+  -webkit-appearance: none;
+  background-color:white;
+  border: 1px solid green;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 20px green;
+}
+
+textarea:focus:valid {
+  -webkit-appearance: none;
+  background-color:white;
+  border: 1px solid green;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 20px green;
+}
+
+textarea:focus:invalid {
+  -webkit-appearance: none;
+  background-color:#fad0d0;
+  border: 1px solid #e85c5c;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 20px red;
+}

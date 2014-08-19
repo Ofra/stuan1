@@ -1,0 +1,58 @@
+#galeria2{
+	background: lightgray;
+	float:right;
+	margin-right:0.3em;
+	margin-top: 5em; 
+	overflow: scroll;
+	width: 25%;
+	height: 449px;
+	border-radius: 0% 0% 0% 0%;
+	box-shadow: 2px 2px 2px #2c539e;
+	padding: 0;
+}
+
+#galeria2 ul{
+	padding: 0.7em;
+	margin: 0px;
+}
+
+#galeria2 ul li {
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+}
+
+#galeria2 ul li a{
+	padding: 0px;
+	margin: 0px;
+}
+
+#galeria2 ul li a img{
+	padding: 0px;
+	margin: 0px;
+	width: 105px;
+	height: 81px;
+}
+
+#galeria2 ul li a img:hover{
+	width: 110px;
+	box-shadow: 0px 0px 5px blue;
+}
+
+
+#container2 h2{
+	color: #2c539e;
+	text-shadow:2px 2px 2px black;
+	position: absolute;
+	margin-top: 2em;
+	right: 7.5em;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 1.5em;
+1
+}
+
+#container2 p{
+	position: absolute;
+	right: 10em;
+}
+

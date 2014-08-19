@@ -1,0 +1,78 @@
+#administrar2{
+	background-color: white;
+	box-shadow: 0px 0px 20px white;
+	height: 500px;
+	margin:auto;
+	width: 90%;
+}
+#administrar2 #administrar3 h1{
+	color:#2c539e;
+	font-size: 3em;
+	margin-top: -10px;
+	text-align: center;
+	text-shadow:2px 2px 2px gray;
+	padding-top: 1em;
+}
+
+#administrar2 #administrar3 .icon-file-media{
+	color:#fbf269;
+	font-size: 10em;
+	margin-left: 1.3em;
+	margin-top: 0.3em;
+	position: absolute;
+	text-shadow:2px 2px 2px blue;
+	text-decoration: none;
+}
+
+#administrar2 #administrar3 .icon-pictures{
+	color:#0095e5;
+	font-size: 10em;
+	margin-left: 3.5em;
+	margin-top: 0.2em;
+	position: absolute;
+	text-shadow:2px 2px 2px black;
+	
+}
+
+#administrar2 #administrar3 .icon-file-media:hover{
+	color:#0055e5;
+	text-shadow:0px 0px 20px yellow;
+}
+
+#administrar2 #administrar3 .icon-pictures:hover{
+	color:#0055e5;
+	text-shadow:0px 0px 20px yellow;
+}
+
+#administrar2 #administrar3 .icon-diff-added{
+	color:#0055e5;
+	font-size: 1.5em;
+	margin-left: 6.5em;
+	margin-top: 9em;
+	position: absolute;
+	opacity:0.5;
+	text-shadow: 0px 0px 20px yellow;
+}
+
+#administrar2 #administrar3 .icon-tools{
+	text-shadow: 0px 0px 20px yellow;
+	color:#0055e5;
+	font-size: 1.5em;
+	margin-left: 22em;
+	margin-top: 9em;
+	position: absolute;
+	opacity:0.5;
+}
+
+
+#administrar2 #administrar3	#uno:hover a{
+	display: block;
+	opacity: 1;
+
+}	
+
+#administrar2 #administrar3	#dos:hover a{
+	display: block;
+	opacity: 1;
+}	
+

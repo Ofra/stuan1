@@ -1,0 +1,81 @@
+#objetivo{ 
+	background-color: white;
+	margin: auto;
+	height: 80%;
+	width: 95%;
+	position: relative;
+}
+
+#lista_obj0{
+	width: 80%;
+	margin: 2% 0% 2em 6%;
+}
+#lista1_obj{
+	display:none;
+}
+
+#lista2_obj{
+	display:none;
+}
+
+#objetivos{
+	margin:auto;
+	width: 60%;
+}
+
+.objli {
+	background-color: #0095e5;
+	margin-bottom: 1em;
+	padding: 1em;
+	color:white;
+	text-shadow:black 2px 2px 2px;
+}
+
+
+#objli1:hover, #objli2:hover{
+	background-color: #0065e5;
+}
+
+#objetivo_gral h2{
+	margin-top: 0px;
+	color: #171854;
+	margin-left:0em;
+	font-size: 3em;
+	text-shadow:5px 5px 2px lightgray;
+	text-align: center;
+
+}
+
+#objetivo_gral h1{
+	color: #0065e5;
+	margin-left:0em;
+	font-size: 1.5em;
+	text-shadow:2px 2px 2px yellow;
+	margin-left: 6em;
+
+}
+
+#objetivo_gral p{
+	text-align: justify;
+	width: 80%;
+	margin:auto;
+}
+
+#objetivo_part h3{
+	color: #0065e5;
+	margin-left:0em;
+	font-size: 1.5em;
+	text-shadow:2px 2px 2px yellow;
+	margin-left: 4em;
+}
+
+#objetivos li{
+	text-align: justify;
+}
+
+#objetivo .icon-bookmark{
+	margin-left: 80%;
+	color:  #171854;
+	font-size: 5em;
+	text-shadow:5px 2px 2px black;
+}

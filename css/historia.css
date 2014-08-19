@@ -1,0 +1,56 @@
+#historia{
+	background-color: white;
+	box-shadow: 0px 0px 20px white;
+	margin:auto;
+	width: 90%;
+}
+
+#historia h2{
+	color:#171854;
+	font-size: 2.5em;
+	margin-top: -10px;
+	padding-top: 1em;
+	text-align: center;
+	text-shadow:2px 2px 2px yellow;
+}
+
+#historia div{
+	margin:auto;
+	text-align: justify;
+	width: 80%;
+}
+
+#historia div h3{
+	color:#0005e5;
+	font-size: 1.5em;
+	margin-left: 1em;
+	text-shadow:2px 2px 2px yellow;
+}
+
+#historia div:nth-child(3){
+	width: 100%; 
+	background-color: #f6f5f4;
+}
+
+#historia div:nth-child(4){
+	padding-bottom: 2em;
+}
+
+#historia #hist2 h3{
+	margin-left: 5em;
+}
+
+#historia #hist2 p{
+	width: 80%;
+	margin:auto;
+}
+
+#historia .icon-globe{
+	text-shadow: 0px 0px 50px yellow;
+	color:#0055e5;
+	font-size: 25em;
+	margin-left: 0.5em;
+	margin-top:0.5em;
+	position:absolute;
+	opacity: 0.2;
+}
