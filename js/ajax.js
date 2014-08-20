@@ -334,7 +334,7 @@ function update_ajax(title_album,date_album,desc_corta,desc_larga,archivo,portad
     formData.append('id_album',id_album);
     //formData.append('portada',portada);
 
-    if(title_album != "" && date_album != "" && desc_larga != "" ){
+    if(title_album != "" && date_album != "" ){
 
     
         $.ajax({   
@@ -350,8 +350,13 @@ function update_ajax(title_album,date_album,desc_corta,desc_larga,archivo,portad
             success:  function (response) {
                 //$("#resultado").html(response);
                 //alert(response);
-                apprise(response);
-                window.location.href = './modifica_album.php';
+                //apprise(response);
+                //window.location.href = './modifica_album.php';
+                apprise(response, {'animate':true}, function(r){
+                    if(r==true){
+                        window.location.href = './modifica_album.php';
+                    }
+                });
                 //location.reload();
             },
              error: function(XMLHttpRequest, textStatus, errorThrown) { 
