@@ -6,9 +6,11 @@
 	include('conexion.php');
 	if(isset($_POST['user']) && !empty($_POST['user']) &&
 		isset($_POST['pass']) && !empty($_POST['pass'])){
-		$query = mysql_query("SELECT * from usuario where User='$_POST[user]'",$con) or die("Error en: $query" . mysql_error());;
+		$query = mysqli_query($con, "SELECT * from usuario where User='$_POST[user]'") or die("Error en: $query" . mysql_error());;
 		
-		$sesion = mysql_fetch_array($query);
+		$sesion = mysqli_fetch_array($query);
+
+		
 
 		if($_POST['pass'] == $sesion['Password']){
 			$_SESSION['user'] = $sesion['Id_user'];

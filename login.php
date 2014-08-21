@@ -1,3 +1,7 @@
+<?php
+	ini_set('display_errors', 'On');
+	ini_set('display_errors', 1);
+?>
 <section id="loggin"> 
 	<div id="loggin1">
 		<div id="loggin2">
