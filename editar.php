@@ -12,8 +12,8 @@
 
 	include "php/conexion.php";
 	
-	$result = mysqli_query($con,"SELECT * FROM Album WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysqli_error());
-	$result1 = mysqli_query($con,"SELECT * FROM Imagen WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysqli_error());
+	$result = mysqli_query($con,"SELECT * FROM Album WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysqli_error($con));
+	$result1 = mysqli_query($con,"SELECT * FROM Imagen WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysqli_error($con));
 
 
 	while ($reg = mysqli_fetch_array($result) ) {

@@ -46,7 +46,7 @@ $id = $_POST['id_album'];
                 $result = mysqli_query($con,$query1);
 
                 if (!$result){
-                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
                 }else {
                     //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                 }
@@ -79,7 +79,7 @@ $id = $_POST['id_album'];
                         $result2 = mysqli_query($con,$query2);
 
                         if (!$result2){
-                            echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+                            echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
                         }else {
                             //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                         }
@@ -129,7 +129,7 @@ $id = $_POST['id_album'];
                 $result = mysqli_query($con,$query1);
 
                 if (!$result){
-                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
                 }else {
                     //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                 }
@@ -157,7 +157,7 @@ $id = $_POST['id_album'];
                         $result2 = mysqli_query($con,$query2);
 
                         if (!$result2){
-                            echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+                            echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
                         }else {
                             //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                         }
@@ -210,7 +210,7 @@ $id = $_POST['id_album'];
                 $result = mysqli_query($con,$query1);
 
                 if (!$result){
-                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
                 }else {
                     echo "Los cambios se Guardaron Correctamente.";
                 }
@@ -228,7 +228,7 @@ $id = $_POST['id_album'];
         $result1 = mysqli_query($con,"UPDATE Album SET Fecha='$date_album',Descrip_corta='$desc_corta',Descrip_larga='$desc_larga' WHERE Id_album ='$id'")or die("Problemas enla consulta: ".mysqli_error());  
 
             if (!$result1){
-                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
                 }else {
                     echo "Los cambios se Guardaron Correctamente.";
                 }

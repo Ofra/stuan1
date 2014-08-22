@@ -14,7 +14,7 @@ $desc_larga = $_POST['desc_larga'];
 $archivo = $_FILES['archivo']['tmp_name'];
 $portada = $_FILES['portada']['tmp_name'];
 
-$result2 = mysqli_query($con,"SELECT * FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysqli_error());
+$result2 = mysqli_query($con,"SELECT * FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysqli_error($con));
 
 $total = mysqli_num_rows($result2);	
 if($total==0){//valida que El album no exista	
@@ -46,7 +46,7 @@ if($total==0){//valida que El album no exista
 				$result = mysqli_query($con,$query1);
 
 				if (!$result){
-					echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+					echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
 				}else {
 					//echo "DATOS INSERTADOS CORRECTAMENTE\n";
 				}
@@ -59,7 +59,7 @@ if($total==0){//valida que El album no exista
 
 			//Termina inserccion de portada ++++++++++++++++++++++++++++++++++++
 			//Consulta para obtener el id del album.
-			$result1 = mysqli_query($con,"SELECT Id_album FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysqli_error());
+			$result1 = mysqli_query($con,"SELECT Id_album FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysqli_error($con));
 		
 			while ($reg = mysqli_fetch_array($result1)){
 				$album_id = $reg['Id_album'];			

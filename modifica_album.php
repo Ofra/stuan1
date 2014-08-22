@@ -9,9 +9,9 @@
 	} 
 	include "php/conexion.php";
 	
-	$result = mysqli_query($con,"SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysqli_error());
-	$result1 = mysqli_query($con,"SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysqli_error());
-	$result2 = mysqli_query($con,"SELECT Id_album FROM Album WHERE Principal = '1'")or die("Problemas enla consulta: ".mysqli_error());
+	$result = mysqli_query($con,"SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysqli_error($con));
+	$result1 = mysqli_query($con,"SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysqli_error($con));
+	$result2 = mysqli_query($con,"SELECT Id_album FROM Album WHERE Principal = '1'")or die("Problemas enla consulta: ".mysqli_error($con));
 	
 	while($rs = mysqli_fetch_array($result2)){
 		$album_principal_actual = $rs['Id_album'];
