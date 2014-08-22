@@ -12,11 +12,11 @@
 
 	include "php/conexion.php";
 	
-	$result = mysql_query("SELECT * FROM Album WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysql_error());
-	$result1 = mysql_query("SELECT * FROM Imagen WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysql_error());
+	$result = mysqli_query($con,"SELECT * FROM Album WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysqli_error());
+	$result1 = mysqli_query($con,"SELECT * FROM Imagen WHERE Id_album = $id_album")or die("Problemas enla consulta: ".mysqli_error());
 
 
-	while ($reg = mysql_fetch_array($result) ) {
+	while ($reg = mysqli_fetch_array($result) ) {
 		$fecha = $reg['Fecha'];
 		$titulo = $reg['Titulo_album'];
 		$portada = $reg['Foto_portada'];
@@ -82,7 +82,7 @@ $(document).ready(function(){
 				<h2>Galería Fotográfica</h2>	
 
 				<?php
-					while ($reg1 = mysql_fetch_array($result1) ) {
+					while ($reg1 = mysqli_fetch_array($result1) ) {
 				?>
 					<figure class="picture1">
 							
