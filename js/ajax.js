@@ -14,7 +14,7 @@ function login_ajax(user, pass){
                 $("#resultado").html("Procesando, espere por favor...");
             },
             success:  function (response) {
-                alert(response);
+                //alert(response);
                 //$("#resultado").html(response);
                 if(response == "Sesion Exitosa"){
                 	//alert("Bienvenido a STUAN");

@@ -9,17 +9,17 @@
 					include "header.php";
 				}
 
-				$result = mysql_query("SELECT Id_album,Titulo_album,Descrip_corta FROM Album WHERE Principal='1'");
-				while ($rs = mysql_fetch_array($result)) {
+				$result = mysqli_query($con,"SELECT Id_album,Titulo_album,Descrip_corta FROM Album WHERE Principal='1'");
+				while ($rs = mysqli_fetch_array($result)) {
 					$album_actual = $rs['Id_album'];
 					$titulo = $rs['Titulo_album'];
 					$corta = $rs['Descrip_corta'];
 				}
 
 
-				$result1 = mysql_query("SELECT * FROM Imagen WHERE Id_Album='$album_actual'");
-				$result2 = mysql_query("SELECT * FROM Imagen WHERE Id_Album='$album_actual'");
-				$result3 = mysql_query("SELECT * FROM Album ORDER BY Fecha DESC");
+				$result1 = mysqli_query($con,"SELECT * FROM Imagen WHERE Id_Album='$album_actual'");
+				$result2 = mysqli_query($con,"SELECT * FROM Imagen WHERE Id_Album='$album_actual'");
+				$result3 = mysqli_query($con,"SELECT * FROM Album ORDER BY Fecha DESC");
 			?>
 			<section id="secretario_gral">
 				<p class="titulo1">Mensaje del secretario general Roberto González</p>
@@ -32,7 +32,7 @@
 					<?php
 						$im = "imagen";
 						$cont=1;
-						while ($rs1 = mysql_fetch_array($result1)){
+						while ($rs1 = mysqli_fetch_array($result1)){
 					?>
 					<div id="<?php echo $im.$cont; ?>">
 					    <img src="<?php echo $rs1['nombre'];?>" alt="" />
@@ -54,7 +54,7 @@
 					    	<?php
 								$im1 = "imagen";
 								$cont1=1;
-								while ($rs2 = mysql_fetch_array($result2)){
+								while ($rs2 = mysqli_fetch_array($result2)){
 							?>
 					        <li><a href="<?php echo '#'.$im1.$cont1; ?>" title=""><img src="<?php echo $rs2['nombre'];?>" alt="" style="width:70px; height:55px;"/></a></li>
 					        <?php
@@ -80,7 +80,7 @@
 					<ul class="hoverbox">
 
 						<?php
-							while ($rs3 = mysql_fetch_array($result3)) {
+							while ($rs3 = mysqli_fetch_array($result3)) {
 						?>
 						<li>
 							<a href="album.php?id=<?php echo $rs3['Id_album']; ?>"><img src="<?php echo $rs3['Foto_portada']; ?>" alt="description" title="Ver más..."/></a>
