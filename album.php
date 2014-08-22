@@ -1,7 +1,4 @@
 <?php
-    
-
-
 	session_start();
 	ini_set('display_errors', 'On');
 	ini_set('display_errors', 1);
@@ -18,9 +15,9 @@
 	$id = $_GET['id'];
 		
 	$query="SELECT * FROM Album WHERE Id_album='$id'";
-	$result = mysql_query($query);
+	$result = mysqli_query($con,$query);
 
-	while ($rs = mysql_fetch_array($result)) {
+	while ($rs = mysqli_fetch_array($result)) {
 		$titulo = $rs['Titulo_album'];
 		$larga = $rs['Descrip_larga'];
 		$Foto = $rs['Foto_portada'];
@@ -35,7 +32,7 @@
 	}
 
 	$query1="SELECT * FROM Imagen WHERE Id_album='$id'";
-	$result1 = mysql_query($query1);
+	$result1 = mysqli_query($con,$query1);
 
  ?>
 
@@ -71,7 +68,7 @@
 							<div class="es-carousel">
 								<ul>
 									<?php
-										while ($rs1 = mysql_fetch_array($result1)) {
+										while ($rs1 = mysqli_fetch_array($result1)) {
 									?>
 									<li><a href="#"><img src="<?php echo $rs1['nombre'];?>" data-large="<?php echo $rs1['nombre'];?>" alt="image01" data-description="" /></a></li>
 									<?php
