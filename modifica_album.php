@@ -9,11 +9,11 @@
 	} 
 	include "php/conexion.php";
 	
-	$result = mysql_query("SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysql_error());
-	$result1 = mysql_query("SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysql_error());
-	$result2 = mysql_query("SELECT Id_album FROM Album WHERE Principal = '1'")or die("Problemas enla consulta: ".mysql_error());
+	$result = mysqli_query($con,"SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysqli_error());
+	$result1 = mysqli_query($con,"SELECT * FROM Album Order by Fecha Desc")or die("Problemas enla consulta: ".mysqli_error());
+	$result2 = mysqli_query($con,"SELECT Id_album FROM Album WHERE Principal = '1'")or die("Problemas enla consulta: ".mysqli_error());
 	
-	while($rs = mysql_fetch_array($result2)){
+	while($rs = mysqli_fetch_array($result2)){
 		$album_principal_actual = $rs['Id_album'];
 	}
 
@@ -29,7 +29,7 @@
 		<select id="select_princ"> 
 			<option>--</option>
 		<?php
-			while ($reg1 = mysql_fetch_array($result1) ) {
+			while ($reg1 = mysqli_fetch_array($result1) ) {
 				//valida que el album actual sea igual al del array para seleccionarlo
 				if($album_principal_actual == $reg1['Id_album']){
 					echo '<option value="'.$reg1['Id_album'].'" selected>'. $reg1['Titulo_album'].'</option>';
@@ -46,7 +46,7 @@
 		<br />
 
 		<?php
-			while ($reg = mysql_fetch_array($result) ) {
+			while ($reg = mysqli_fetch_array($result) ) {
 		?>
 			<figure class="picture">
 				<div id="datos">
