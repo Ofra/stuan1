@@ -43,10 +43,10 @@ $id = $_POST['id_album'];
                 
                 $query1 = "UPDATE Album SET Fecha='$date_album',Foto_portada= '$resultado',Descrip_corta='$desc_corta',Descrip_larga='$desc_larga' WHERE Id_album ='$id'";
                 
-                $result = mysql_query($query1);
+                $result = mysqli_query($con,$query1);
 
                 if (!$result){
-                    echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
                 }else {
                     //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                 }
@@ -76,10 +76,10 @@ $id = $_POST['id_album'];
                     if (move_uploaded_file($archivo_codigo, $archivo_subir)) {
 
                         $query2 = "INSERT INTO Imagen(Id_album,nombre)VALUES ('$id','$resultado2')";
-                        $result2 = mysql_query($query2);
+                        $result2 = mysqli_query($con,$query2);
 
                         if (!$result2){
-                            echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+                            echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
                         }else {
                             //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                         }
@@ -94,7 +94,7 @@ $id = $_POST['id_album'];
                     $archivo_invalido .= $_FILES["archivo"]["name"][$n]." -";//obtiene el nombre del archivo invalido
                 }
             }//cierra bule for
-            mysql_close($con);
+            mysqli_close($con);
             if($tipe == 0){
                 if($cont>0){
                     echo "Los cambios se Guardaron Correctamente.";
@@ -126,10 +126,10 @@ $id = $_POST['id_album'];
                 
                 $query1 = "UPDATE Album SET Fecha='$date_album',Descrip_corta='$desc_corta',Descrip_larga='$desc_larga' WHERE Id_album ='$id'";
                 
-                $result = mysql_query($query1);
+                $result = mysqli_query($con,$query1);
 
                 if (!$result){
-                    echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
                 }else {
                     //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                 }
@@ -154,10 +154,10 @@ $id = $_POST['id_album'];
                     if (move_uploaded_file($archivo_codigo, $archivo_subir)) {
 
                         $query2 = "INSERT INTO Imagen(Id_album,nombre)VALUES ('$id','$resultado2')";
-                        $result2 = mysql_query($query2);
+                        $result2 = mysqli_query($con,$query2);
 
                         if (!$result2){
-                            echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+                            echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
                         }else {
                             //echo "DATOS INSERTADOS CORRECTAMENTE\n";
                         }
@@ -172,7 +172,7 @@ $id = $_POST['id_album'];
                     $archivo_invalido .= $_FILES["archivo"]["name"][$n]." -";//obtiene el nombre del archivo invalido
                 }
             }//cierra bule for
-            mysql_close($con);
+            mysqli_close($con);
             if($tipe == 0){
                 if($cont>0){
                     echo "Los cambios se Guardaron Correctamente.";
@@ -207,10 +207,10 @@ $id = $_POST['id_album'];
                 
                 $query1 = "UPDATE Album SET Fecha='$date_album',Foto_portada= '$resultado',Descrip_corta='$desc_corta',Descrip_larga='$desc_larga' WHERE Id_album ='$id'";
                 
-                $result = mysql_query($query1);
+                $result = mysqli_query($con,$query1);
 
                 if (!$result){
-                    echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
                 }else {
                     echo "Los cambios se Guardaron Correctamente.";
                 }
@@ -225,14 +225,14 @@ $id = $_POST['id_album'];
         }
         
     }else{/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////777
-        $result1 = mysql_query("UPDATE Album SET Fecha='$date_album',Descrip_corta='$desc_corta',Descrip_larga='$desc_larga' WHERE Id_album ='$id'")or die("Problemas enla consulta: ".mysql_error());  
+        $result1 = mysqli_query($con,"UPDATE Album SET Fecha='$date_album',Descrip_corta='$desc_corta',Descrip_larga='$desc_larga' WHERE Id_album ='$id'")or die("Problemas enla consulta: ".mysqli_error());  
 
             if (!$result1){
-                    echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+                    echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
                 }else {
                     echo "Los cambios se Guardaron Correctamente.";
                 }
-        mysql_close($con);
+        mysqli_close($con);
 
     }
 
