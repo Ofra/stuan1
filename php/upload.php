@@ -79,10 +79,11 @@ if($total==0){//valida que El album no exista
 					if (move_uploaded_file($archivo_codigo, $archivo_subir)) {
 
 						$query2 = "INSERT INTO Imagen(Id_album,nombre)VALUES ('$album_id','$resultado2')";
-						$result2 = mysqli_query($con,$query2);
+						$result2 = mysqli_query($con,$query2)or die (mysqli_error($con));
 
 						if (!$result2){
-							echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
+							//echo 'La consulta SQL contiene errores.'.mysqli_error($con)."\n";
+							echo 'La consulta SQL contiene errores.';
 						}else {
 							//echo "DATOS INSERTADOS CORRECTAMENTE\n";
 						}
