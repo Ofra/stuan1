@@ -14,9 +14,9 @@ $desc_larga = $_POST['desc_larga'];
 $archivo = $_FILES['archivo']['tmp_name'];
 $portada = $_FILES['portada']['tmp_name'];
 
-$result2 = mysql_query("SELECT * FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysql_error());
+$result2 = mysqli_query($con,"SELECT * FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysqli_error());
 
-$total = mysql_num_rows($result2);	
+$total = mysqli_num_rows($result2);	
 if($total==0){//valida que El album no exista	
 	$cantidad = count($archivo);
 	$nuevodirectorio = "../img/pic/";
@@ -43,10 +43,10 @@ if($total==0){//valida que El album no exista
 				$resultado = substr($archivo_subir_1, 3);//elimina el ../ de la ruta
 				$query1 = "INSERT INTO Album (Titulo_album,Fecha,Foto_portada,Descrip_corta,Descrip_larga,Principal)VALUES ('$title_album','$date_album','$resultado','$desc_corta','$desc_larga','0')";
 				
-				$result = mysql_query($query1);
+				$result = mysqli_query($con,$query1);
 
 				if (!$result){
-					echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+					echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
 				}else {
 					//echo "DATOS INSERTADOS CORRECTAMENTE\n";
 				}
@@ -59,9 +59,9 @@ if($total==0){//valida que El album no exista
 
 			//Termina inserccion de portada ++++++++++++++++++++++++++++++++++++
 			//Consulta para obtener el id del album.
-			$result1 = mysql_query("SELECT Id_album FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysql_error());
+			$result1 = mysqli_query($con,"SELECT Id_album FROM Album WHERE Titulo_album='$title_album'")or die("Problemas enla consulta: ".mysqli_error());
 		
-			while ($reg = mysql_fetch_array($result1)){
+			while ($reg = mysqli_fetch_array($result1)){
 				$album_id = $reg['Id_album'];			
 			}		
 
@@ -79,10 +79,10 @@ if($total==0){//valida que El album no exista
 					if (move_uploaded_file($archivo_codigo, $archivo_subir)) {
 
 						$query2 = "INSERT INTO Imagen(Id_album,nombre)VALUES ('$album_id','$resultado2')";
-						$result2 = mysql_query($query2);
+						$result2 = mysqli_query($con,$query2);
 
 						if (!$result2){
-							echo 'La consulta SQL contiene errores.'.mysql_error()."\n";
+							echo 'La consulta SQL contiene errores.'.mysqli_error()."\n";
 						}else {
 							//echo "DATOS INSERTADOS CORRECTAMENTE\n";
 						}
@@ -97,7 +97,7 @@ if($total==0){//valida que El album no exista
 					$archivo_invalido .= $_FILES["archivo"]["name"][$n]." -";//obtiene el nombre del archivo invalido
 				}
 			}//cierra bule for
-			mysql_close($con);
+			mysqli_close($con);
 			if($tipe == 0){
 				if($cont>0){
 					echo "¡Registro de Album Exitoso.!";
